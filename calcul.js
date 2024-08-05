@@ -352,7 +352,7 @@ function CalculateClasses()
 
     classRegistry.forEach(ClassRef => {
         let delta = Math.abs(val6 - ClassRef.Polyvalence);
-        ClassRef.Mismatch += delta * 3;
+        ClassRef.Mismatch += delta * 2;
     });
 
     classRegistry.forEach(ClassRef => {
