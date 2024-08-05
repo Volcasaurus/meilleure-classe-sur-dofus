@@ -9,6 +9,7 @@ class PersoDofus {
     static Polyvalence;
     static imagePath;
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Cra extends PersoDofus {
@@ -23,6 +24,7 @@ class Cra extends PersoDofus {
     static Polyvalence = -5;
     static imagePath = './Cra.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Eca extends PersoDofus {
@@ -51,6 +53,7 @@ class Elio extends PersoDofus {
     static Polyvalence = 3;
     static imagePath = './Eliotrope.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Eni extends PersoDofus {
@@ -79,6 +82,7 @@ class Enu extends PersoDofus {
     static Polyvalence = -5;
     static imagePath = './Enutrof.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Feca {
@@ -93,6 +97,7 @@ class Feca {
     static Polyvalence = 4;
     static imagePath = './Feca.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Forge extends PersoDofus {
@@ -107,6 +112,7 @@ class Forge extends PersoDofus {
     static Polyvalence = 5;
     static imagePath = './Forgelance.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Hupper extends PersoDofus {
@@ -121,6 +127,7 @@ class Hupper extends PersoDofus {
     static Polyvalence = 5;
     static imagePath = './Huppermage.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Iop extends PersoDofus {
@@ -135,6 +142,7 @@ class Iop extends PersoDofus {
     static Polyvalence = -3;
     static imagePath = './Iop.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Ougi extends PersoDofus {
@@ -149,6 +157,7 @@ class Ougi extends PersoDofus {
     static Polyvalence = -5;
     static imagePath = './Ouginak.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Osa extends PersoDofus {
@@ -163,6 +172,7 @@ class Osa extends PersoDofus {
     static Polyvalence = 4;
     static imagePath = './Osamodas.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Panda extends PersoDofus {
@@ -177,6 +187,7 @@ class Panda extends PersoDofus {
     static Polyvalence = 4;
     static imagePath = './Pandawa.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Roublard extends PersoDofus {
@@ -191,6 +202,7 @@ class Roublard extends PersoDofus {
     static Polyvalence = -5;
     static imagePath = './Roublard.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Sacri extends PersoDofus {
@@ -205,6 +217,7 @@ class Sacri extends PersoDofus {
     static Polyvalence = -3;
     static imagePath = './Sacrieur.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Sadi extends PersoDofus {
@@ -219,6 +232,7 @@ class Sadi extends PersoDofus {
     static Polyvalence = -4;
     static imagePath = './Sadida.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Sram extends PersoDofus {
@@ -233,6 +247,7 @@ class Sram extends PersoDofus {
     static Polyvalence = -5;
     static imagePath = './Sram.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Steamer extends PersoDofus {
@@ -247,6 +262,7 @@ class Steamer extends PersoDofus {
     static Polyvalence = 5;
     static imagePath = './Steamer.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Xelor extends PersoDofus {
@@ -261,6 +277,7 @@ class Xelor extends PersoDofus {
     static Polyvalence = -5;
     static imagePath = './Xelor.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 class Zobal extends PersoDofus {
@@ -275,6 +292,7 @@ class Zobal extends PersoDofus {
     static Polyvalence = -4;
     static imagePath = './Zobal.png';
     static Mismatch = 0;
+    static InTheRace = true;
 }
 
 const classRegistry = [
@@ -323,6 +341,7 @@ function CalculateClasses()
     classRegistry.forEach(ClassRef => {
         let delta = Math.abs(val2 - ClassRef.Tank);
         ClassRef.Mismatch += delta * 6;
+        if (delta == 10) ClassRef.InTheRace = false;
     });
 
     classRegistry.forEach(ClassRef => {
@@ -338,6 +357,7 @@ function CalculateClasses()
     classRegistry.forEach(ClassRef => {
         let delta = Math.abs(val7 - ClassRef.DamageDealer);
         ClassRef.Mismatch += delta * 4;
+        if (delta == 10) ClassRef.InTheRace = false;
     });
 
     // Evaluate multiple play styles
@@ -376,7 +396,9 @@ function CalculateClasses()
         }
     });
 
-    const classValues = classRegistry.map(ClassRef => ({
+    const filteredRegistry = classRegistry.filter(ClassRef => ClassRef.InTheRace);
+
+    const classValues = filteredRegistry.map(ClassRef => ({
         class: ClassRef,
         Mismatch: ClassRef.Mismatch
     }));
