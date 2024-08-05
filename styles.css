@@ -121,9 +121,9 @@ body {
 
 #results {
   display: grid;
-  grid-template-columns: 1fr 4fr; /* 2 columns */
+  grid-template-columns: 1fr 6fr; /* 2 columns */
   grid-template-rows: 1fr 1fr 1fr;    /* 3 rows */
-  width: 90%;
+  width: 100%;
   height: auto;
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
