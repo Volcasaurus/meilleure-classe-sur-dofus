@@ -403,6 +403,11 @@ function CalculateClasses()
     img2.src = top3Smallest[0].class.imagePath;
     img2.style.width = "400%";
     img2.style.height = "auto";
+    if (isMobile){
+     img2.src = top3Smallest[0].class.imagePath;
+     img2.style.width = "10%";
+     img2.style.height = "auto";
+    }
     results.appendChild(img2);
 
     var img3 = document.createElement("img");
@@ -413,6 +418,11 @@ function CalculateClasses()
     img4.src = top3Smallest[1].class.imagePath;
     img4.style.width = "400%";
     img4.style.height = "auto";
+    if (isMobile){
+     img4.src = top3Smallest[0].class.imagePath;
+     img4.style.width = "10%";
+     img4.style.height = "auto";
+    }
     results.appendChild(img4);
 
     var img5 = document.createElement("img");
@@ -423,6 +433,11 @@ function CalculateClasses()
     img6.src = top3Smallest[2].class.imagePath;
     img6.style.width = "400%";
     img6.style.height = "auto";
+    if (isMobile){
+     img6.src = top3Smallest[0].class.imagePath;
+     img6.style.width = "10%";
+     img6.style.height = "auto";
+    }
     results.appendChild(img6);
 
     var button = document.createElement('button');
@@ -450,5 +465,10 @@ function restart() {
 }
 
 function isMobile() {
-  return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  
+  // Regular expression to match common mobile device user agents
+  const mobilePatterns = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
+  
+  return mobilePatterns.test(userAgent);
 }
