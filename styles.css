@@ -113,6 +113,18 @@ body {
   z-index: 1000; /* Ensure it is above other content */
 }
 
+  #results {
+  display: none;
+  grid-template-columns: 1fr 3fr; /* 2 columns */
+  grid-template-rows: 1fr 1fr 1fr;    /* 3 rows */
+  transform: scale(0.7);
+  transform-origin: top left; /* Anchor scaling at the top left corner */
+  width: 100%; /* Adjust to fit the container */
+  height: 100vh; /* Full viewport height for demonstration */
+  gap: 5px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
   .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
