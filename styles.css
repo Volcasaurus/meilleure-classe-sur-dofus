@@ -145,7 +145,7 @@ body {
   display: none;
   grid-template-columns: 1fr 3fr; /* 2 columns */
   grid-template-rows: 1fr 1fr 1fr;    /* 3 rows */
-  transform: scale(0.4);
+  transform: scale(0.1);
   transform-origin: top left; /* Anchor scaling at the top left corner */
   width: 100%; /* Adjust to fit the container */
   height: 100vh; /* Full viewport height for demonstration */
