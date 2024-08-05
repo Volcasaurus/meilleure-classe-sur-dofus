@@ -401,8 +401,7 @@ function CalculateClasses()
 
     var img2 = document.createElement("img");
     img2.src = top3Smallest[0].class.imagePath;
-    if (isMobile) img2.style.width = "100%"; 
-    else img2.style.width = "400%";
+    img2.style.width = "400%";
     img2.style.height = "auto";
     results.appendChild(img2);
 
@@ -412,8 +411,7 @@ function CalculateClasses()
 
     var img4 = document.createElement("img");
     img4.src = top3Smallest[1].class.imagePath;
-    if (isMobile) img4.style.width = "100%"; 
-    else img4.style.width = "400%";
+    img4.style.width = "400%";
     img4.style.height = "auto";
     results.appendChild(img4);
 
@@ -423,8 +421,7 @@ function CalculateClasses()
 
     var img6 = document.createElement("img");
     img6.src = top3Smallest[2].class.imagePath;
-    if (isMobile) img6.style.width = "100%"; 
-    else img6.style.width = "400%";
+    img6.style.width = "400%";
     img6.style.height = "auto";
     results.appendChild(img6);
 
