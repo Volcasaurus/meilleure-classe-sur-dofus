@@ -401,7 +401,8 @@ function CalculateClasses()
 
     var img2 = document.createElement("img");
     img2.src = top3Smallest[0].class.imagePath;
-    img2.style.width = "400%";
+    if (isMobile) img2.style.width = "100%"; 
+    else img2.style.width = "400%";
     img2.style.height = "auto";
     results.appendChild(img2);
 
@@ -411,7 +412,8 @@ function CalculateClasses()
 
     var img4 = document.createElement("img");
     img4.src = top3Smallest[1].class.imagePath;
-    img4.style.width = "400%";
+    if (isMobile) img4.style.width = "100%"; 
+    else img4.style.width = "400%";
     img4.style.height = "auto";
     results.appendChild(img4);
 
@@ -421,7 +423,8 @@ function CalculateClasses()
 
     var img6 = document.createElement("img");
     img6.src = top3Smallest[2].class.imagePath;
-    img6.style.width = "400%";
+    if (isMobile) img6.style.width = "100%"; 
+    else img6.style.width = "400%";
     img6.style.height = "auto";
     results.appendChild(img6);
 
@@ -447,4 +450,8 @@ function CalculateClasses()
 function restart() {
     Array.from(main.querySelectorAll('input')).forEach(input => input.value = 0);
     location.reload();
+}
+
+function isMobile() {
+  return window.matchMedia("only screen and (max-width: 767px)").matches;
 }
