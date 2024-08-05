@@ -119,6 +119,15 @@ body {
   z-index: 1000; /* Ensure it is above other content */
 }
 
+#results {
+  display: grid;
+  grid-template-columns: 1fr 4fr; /* 2 columns */
+  grid-template-rows: 1fr 1fr 1fr;    /* 3 rows */
+  width: 90%;
+  height: auto;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
   .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
