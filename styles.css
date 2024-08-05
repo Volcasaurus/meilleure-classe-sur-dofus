@@ -127,4 +127,17 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: absolute; /* Absolute position relative to the body */
 }
+
+  .main-heading {
+    grid-column: 1 / -1;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+  .slider-heading {
+    grid-column: 1 / -1;
+    font-size: 12px;
+    margin-bottom: 7px;
+    align-items: center;
+}
 }
