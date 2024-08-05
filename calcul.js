@@ -401,8 +401,7 @@ function CalculateClasses()
 
     var img2 = document.createElement("img");
     img2.src = top3Smallest[0].class.imagePath;
-    if (!isMobile) { img2.src = top3Smallest[0].class.imagePath; img2.style.width = "400%"; }
-    else { img1.src = './Classe1.png'; }
+    img2.style.width = "400%";
     img2.style.height = "auto";
     results.appendChild(img2);
 
