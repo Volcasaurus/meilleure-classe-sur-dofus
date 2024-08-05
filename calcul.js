@@ -336,6 +336,7 @@ function CalculateClasses()
     classRegistry.forEach(ClassRef => {
         let delta = Math.abs(val1 - ClassRef.Difficulty);
         ClassRef.Mismatch += delta * 4;
+        if (delta == 10) ClassRef.InTheRace = false;
     });
 
     classRegistry.forEach(ClassRef => {
