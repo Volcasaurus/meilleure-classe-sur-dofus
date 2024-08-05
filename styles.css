@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers the container horizontally */
+  align-items: center; /* Centers the container vertically */
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('./Dofus-Background.jpg');
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(16, auto);
+  background-color: rgba(144, 238, 144, 0.9);
+  color: black;
+  text-align: center;
+  padding: 2vw; /* Padding relative to viewport width */
+  width: 50vw; /* Width relative to viewport width */
+  height: auto; /* Height adjusts based on content */
+  font-size: calc(1rem); /* Fluid typography */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute; /* Absolute position relative to the body */
+}
+
+.main-heading {
+    grid-column: 1 / -1;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.slider-heading {
+    grid-column: 1 / -1;
+    font-size: 18px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.slider-text-left, .slider-text-right {
+    text-align: center;
+}
+
+.slider-text-left {
+    margin-right: 10px; /* Space between text and slider */
+}
+
+.slider-text-right {
+    margin-left: 10px; /* Space between text and slider */
+}
+
+.slider {
+
+}
+
+
+#submit-button {
+    grid-column: 2 / 3;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+#illugauche {
+  position: fixed;
+  top: 0;          
+  left: 0; 
+  transform-origin: top left;
+  transform: scale(0.6);
+  z-index: 1000; /* Ensure it is above other content */
+}
+
+#illudroite {
+  position: fixed; /* Fixes the position relative to the viewport */
+  top: 0;          /* Aligns the image to the top of the viewport */
+  right: 0; 
+  transform-origin: top right;
+  transform: scale(0.6);
+  z-index: 1000; /* Ensure it is above other content */
+}
+
+#results {
+  display: none;
+  grid-template-columns: 1fr 3fr; /* 2 columns */
+  grid-template-rows: 1fr 1fr 1fr;    /* 3 rows */
+  transform: scale(0.9);
+  transform-origin: top left; /* Anchor scaling at the top left corner */
+  width: 100%; /* Adjust to fit the container */
+  height: 80vh; /* Full viewport height for demonstration */
+  gap: 5px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
