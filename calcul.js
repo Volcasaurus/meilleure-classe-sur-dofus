@@ -69,7 +69,7 @@ class Eni extends PersoDofus {
 
 class Enu extends PersoDofus {
     static Difficulty = -2;
-    static Tank = -5;
+    static Tank = -4;
     static DamageDealer = -4;
     static Solo = 0;
     static Team = 4;
@@ -209,9 +209,9 @@ class Sacri extends PersoDofus {
 
 class Sadi extends PersoDofus {
     static Difficulty = 3;
-    static Tank = -4;
+    static Tank = -3;
     static DamageDealer = 3;
-    static Solo = 4;
+    static Solo = 3;
     static Team = 4;
     static Early = -3;
     static Static = 1;
