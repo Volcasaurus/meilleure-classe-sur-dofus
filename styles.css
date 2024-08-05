@@ -101,3 +101,15 @@ body {
   gap: 5px;
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
+
+@media (max-width: 767px) {
+  #illugauche, #illudroite {
+  display: none;
+  position: fixed;
+  top: 0;          
+  left: 0; 
+  width: 23vw; /* 50% of the viewport width */
+  height: auto;
+  z-index: 1000; /* Ensure it is above other content */
+}
+}
