@@ -12,42 +12,44 @@
     <div id="main" class="container">
         <h1 class="main-heading">Identifie tes classes de prédilection rapidement!</h1>
 
-                <h2 class="slider-heading">1. Tu recherches un gameplay simple ou plus riche et difficile à prendre en main?</h2>
-                    <span class="slider-text-left">Je préfère sans prise de tête.</span>
-                    <input id="1" type="range" min="-5" max="5" value="0" class="slider">
-                    <span class="slider-text-right">Je veux maîtriser une classe profonde.</span>
+        <h2 class="slider-heading">1. Tu recherches un gameplay simple ou plus riche et difficile à prendre en main?</h2>
+        <span class="slider-text-left">Je préfère sans prise de tête.</span>
+        <input id="1" type="range" min="-5" max="5" value="0" class="slider">
+        <span class="slider-text-right">Je veux maîtriser une classe profonde.</span>
 
-                <h2 class="slider-heading">2. Comment tu te défends contre tes adversaires?</h2>
-                    <span class="slider-text-left">Je reste à distance de sécurité sans salir mes mains.</span>
-                    <input id="2" type="range" min="-5" max="5" value="0" class="slider">
-                    <span class="slider-text-right">Je fonce dans la bagarre et je résiste les coups.</span>
+        <h2 class="slider-heading">2. Comment tu te défends contre tes adversaires?</h2>
+        <span class="slider-text-left">Je reste à distance de sécurité sans salir mes mains.</span>
+        <input id="2" type="range" min="-5" max="5" value="0" class="slider">
+        <span class="slider-text-right">Je fonce dans la bagarre et je résiste les coups.</span>
 
-                <h2 class="slider-heading">3. Damage dealer ou support?</h2>
-                    <span class="slider-text-left">Je préfère plus de flexibilité ou de soutien.</span>
-                    <input id="7" type="range" min="-5" max="5" value="0" class="slider">
-                    <span class="slider-text-right">Je suis la star qui mettra les gros chiffres.</span>
+        <h2 class="slider-heading">3. Damage dealer ou support?</h2>
+        <span class="slider-text-left">Je préfère plus de flexibilité ou de soutien.</span>
+        <input id="7" type="range" min="-5" max="5" value="0" class="slider">
+        <span class="slider-text-right">Je suis la star qui mettra les gros chiffres.</span>
 
-                <h2 class="slider-heading">4. Tu priorises le jeu autonome ou le jeu en groupe?</h2>
-                    <span class="slider-text-left">Je veux être indépendant au maximum et surtout jouer en solo.</span>
-                    <input id="3" type="range" min="-5" max="5" value="0" class="slider">
-                    <span class="slider-text-right">Je souhaite d'être un précieux atout à mon équipe.</span>
+        <h2 class="slider-heading">4. Tu priorises le jeu autonome ou le jeu en groupe?</h2>
+        <span class="slider-text-left">Je veux être indépendant au maximum et surtout jouer en solo.</span>
+        <input id="3" type="range" min="-5" max="5" value="0" class="slider">
+        <span class="slider-text-right">Je souhaite d'être un précieux atout à mon équipe.</span>
 
-                <h2 class="slider-heading">5. T'as plutôt un esprit farmeur (earlygame) ou tu aimes débloquer ton plein potentiel en lategame?</h2>
-                    <span class="slider-text-left">Je ne suis pas pressé, j'aimerais devenir surpuissant lorsque le combat perdure.</span>
-                    <input id="4" type="range" min="-5" max="5" value="0" class="slider">
-                    <span class="slider-text-right">Je veux être puissant et impactant dès le tout début du combat.</span>
+        <h2 class="slider-heading">5. T'as plutôt un esprit farmeur (earlygame) ou tu aimes débloquer ton plein potentiel en lategame?</h2>
+        <span class="slider-text-left">Je ne suis pas pressé, j'aimerais devenir surpuissant lorsque le combat perdure.</span>
+        <input id="4" type="range" min="-5" max="5" value="0" class="slider">
+        <span class="slider-text-right">Je veux être puissant et impactant dès le tout début du combat.</span>
 
-                <h2 class="slider-heading">6. Comment tu imagines idéalement tes combats niveau dynamisme?</h2>
-                    <span class="slider-text-left">Statique: Pas de prise de tête côté placement.</span>
-                    <input id="5" type="range" min="-5" max="5" value="0" class="slider">
-                    <span class="slider-text-right">Dynamique: J'adore être mobile ou faire du placement pour contrôler le terrain.</span>
+        <h2 class="slider-heading">6. Comment tu imagines idéalement tes combats niveau dynamisme?</h2>
+        <span class="slider-text-left">Statique: Pas de prise de tête côté placement.</span>
+        <input id="5" type="range" min="-5" max="5" value="0" class="slider">
+        <span class="slider-text-right">Dynamique: J'adore être mobile ou faire du placement pour contrôler le terrain.</span>
 
-                <h2 class="slider-heading">7. Plutôt généraliste ou spécialiste?</h2>
-                    <span class="slider-text-left">L'efficacité, je veux briller dans mon domaine.</span>
-                    <input id="6" type="range" min="-5" max="5" value="0" class="slider">
-                    <span class="slider-text-right">La polyvalence, je veux pouvoir tout faire.</span>
-            <button id="submit-button">Envoyer</button>
-            <div id="results"></div>
+        <h2 class="slider-heading">7. Plutôt généraliste ou spécialiste?</h2>
+        <span class="slider-text-left">L'efficacité, je veux briller dans mon domaine.</span>
+        <input id="6" type="range" min="-5" max="5" value="0" class="slider">
+        <span class="slider-text-right">La polyvalence, je veux pouvoir tout faire.</span>
+        <button id="submit-button">Envoyer</button>
+    </div>
+    <div id="resultcontainer">
+        <div id="results"></div>
     </div>
 
     <script src="calcul.js"></script>

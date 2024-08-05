@@ -391,8 +391,10 @@ function CalculateClasses()
     // Prepare new page
     var main = document.getElementById("main");
     Array.from(main.children).forEach(child => child.style.display = "none");
+    main.style.display = "none";
     var results = document.getElementById("results");
-    results.style.display = "grid";
+    var resultcontainer = document.getElementById("resultcontainer");
+    resultcontainer.style.display = 'flex';
 
     // 2x3 grid: fix medals in the left column, class images in the right column
     var img1 = document.createElement("img");
@@ -401,8 +403,6 @@ function CalculateClasses()
 
     var img2 = document.createElement("img");
     img2.src = top3Smallest[0].class.imagePath;
-    img2.style.width = "400%";
-    img2.style.height = "auto";
     results.appendChild(img2);
 
     var img3 = document.createElement("img");
@@ -411,8 +411,6 @@ function CalculateClasses()
 
     var img4 = document.createElement("img");
     img4.src = top3Smallest[1].class.imagePath;
-    img4.style.width = "400%";
-    img4.style.height = "auto";
     results.appendChild(img4);
 
     var img5 = document.createElement("img");
@@ -421,14 +419,18 @@ function CalculateClasses()
 
     var img6 = document.createElement("img");
     img6.src = top3Smallest[2].class.imagePath;
-    img6.style.width = "400%";
-    img6.style.height = "auto";
     results.appendChild(img6);
+
+    var elements = document.querySelectorAll('#results *');
+    elements.forEach(function (element) {
+        element.style.width = '100%';
+        element.style.height = 'auto';
+    });
 
     var button = document.createElement('button');
     button.textContent = 'Retour';
     button.style.padding = '10px 20px';
-    button.style.backgroundColor = 'green';
+    button.style.backgroundColor = 'blue';
     button.style.color = 'white';
     button.style.border = 'none';
     button.style.borderRadius = '4px';
