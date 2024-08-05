@@ -112,4 +112,19 @@ body {
   height: auto;
   z-index: 1000; /* Ensure it is above other content */
 }
+
+  .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(16, auto);
+  background-color: rgba(144, 238, 144, 0.9);
+  color: black;
+  text-align: center;
+  padding: 2vw; /* Padding relative to viewport width */
+  width: 100vw; /* Width relative to viewport width */
+  height: auto; /* Height adjusts based on content */
+  font-size: 8px; /* Fluid typography */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute; /* Absolute position relative to the body */
+}
 }
