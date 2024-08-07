@@ -470,7 +470,6 @@ function CalculateClasses()
 }
 
 function restart() {
-    Array.from(main.querySelectorAll('input')).forEach(input => input.value = 0);
     location.reload();
 }
 
