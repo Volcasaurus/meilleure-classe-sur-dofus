@@ -227,8 +227,8 @@ class Sadi extends PersoDofus {
     static Solo = 3;
     static Team = 4;
     static Early = -3;
-    static Static = 1;
-    static Dynamic = 5;
+    static Static = 5;
+    static Dynamic = 1;
     static Polyvalence = -4;
     static imagePath = './Sadida.png';
     static Mismatch = 0;
