@@ -73,12 +73,12 @@ class Eni extends PersoDofus {
 class Enu extends PersoDofus {
     static Difficulty = -2;
     static Tank = -4;
-    static DamageDealer = -4;
-    static Solo = 0;
+    static DamageDealer = -3;
+    static Solo = 2;
     static Team = 4;
     static Early = 5;
     static Static = 5;
-    static Dynamic = 1;
+    static Dynamic = 2;
     static Polyvalence = -5;
     static imagePath = './Enutrof.png';
     static Mismatch = 0;
@@ -122,7 +122,7 @@ class Hupper extends PersoDofus {
     static Solo = 5;
     static Team = 0;
     static Early = 3;
-    static Static = 3;
+    static Static = 2;
     static Dynamic = 5;
     static Polyvalence = 5;
     static imagePath = './Huppermage.png';
@@ -153,7 +153,7 @@ class Ougi extends PersoDofus {
     static Team = 3;
     static Early = 5;
     static Static = 5;
-    static Dynamic = 0;
+    static Dynamic = 1;
     static Polyvalence = -5;
     static imagePath = './Ouginak.png';
     static Mismatch = 0;
@@ -207,7 +207,7 @@ class Roublard extends PersoDofus {
 
 class Sacri extends PersoDofus {
     static Difficulty = -1;
-    static Tank = 5
+    static Tank = 5;
     static DamageDealer = 2;
     static Solo = 4;
     static Team = 3;
@@ -224,7 +224,7 @@ class Sadi extends PersoDofus {
     static Difficulty = 3;
     static Tank = -3;
     static DamageDealer = 3;
-    static Solo = 3;
+    static Solo = 4;
     static Team = 4;
     static Early = -3;
     static Static = 5;
@@ -256,7 +256,7 @@ class Steamer extends PersoDofus {
     static DamageDealer = 0;
     static Solo = 4;
     static Team = 4;
-    static Early = -1;
+    static Early = -2;
     static Static = 4;
     static Dynamic = 5;
     static Polyvalence = 5;
@@ -283,7 +283,7 @@ class Xelor extends PersoDofus {
 class Zobal extends PersoDofus {
     static Difficulty = -4;
     static Tank = 5;
-    static DamageDealer = -5;
+    static DamageDealer = -4;
     static Solo = 0;
     static Team = 5;
     static Early = 5;
